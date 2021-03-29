@@ -26,12 +26,26 @@
             gap: 12px;
             justify-content: flex-end;
         }
+        #customize-button {
+            display: inline-block;
+            position: relative;
+            border-radius: 15px;
+            outline: none;
+            width: 100px;
+            padding: 5px;
+            top: 700px;
+            left: 805px;
+            color: #00B3FF;
+            background-color: white;
+        }
         .nav-font {
-            font: 13px Arial; 
+            font: Arial;
+            font-size: 13px;
         }
         ::placeholder {
             font-size:  16px;
         }
+        
         
     </style>
 </header>
@@ -53,12 +67,13 @@
         <form>
             <label for="searchbar"></label>
             <input type="text" id="searchbar" 
-            name="searchbar" placeholder="Search Google or type a URL"
-            >
-        </form>
+            name="searchbar" placeholder="Search Google or type a URL">
+        </form> 
     </div>
-</body>
+</body> 
 
 <footer>
-    <!-- Put customize here-->
+    <div>
+        <button type="button" id="customize-button">Customize</button>
+    </div>
 </footer>
