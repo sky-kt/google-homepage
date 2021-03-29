@@ -19,13 +19,31 @@
             border-radius: 25px;
             outline: none;
         }
-        #navigation {
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-left {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 12px;
+            justify-content: flex-start;
+        }
+        .nav-right {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             gap: 12px;
             justify-content: flex-end;
         }
+
+        .nav-font {
+            font: Arial;
+            font-size: 13px;
+        }
+
         #customize-button {
             display: inline-block;
             position: relative;
@@ -38,23 +56,28 @@
             color: #00B3FF;
             background-color: white;
         }
-        .nav-font {
-            font: Arial;
-            font-size: 13px;
-        }
+        
         ::placeholder {
             font-size:  16px;
         }
     </style>
 </header>
 
-<nav id="navigation">
-    <p class="nav-font"><a href="https://mail.google.com/mail/u/0/"
-        target="_blank">Gmail</a></p>
-    <p class="nav-font"><a href="https://www.google.com/imghp?hl=en&tab=ri&authuser=0&ogbl" 
-        target="_blank">Images</a></p>
-    <p class="nav-font"><a href="https://myaccount.google.com/"
-        target="_blank">Account</a></p>
+<nav>
+    <div class="navigation">
+        <div class="nav-left">
+            <p class="nav-font">About</p>
+            <p class="nav-font">Store</p>
+        </div>
+        <div class="nav-right">
+            <p class="nav-font"><a href="https://mail.google.com/mail/u/0/"
+                target="_blank">Gmail</a></p>
+            <p class="nav-font"><a href="https://www.google.com/imghp?hl=en&tab=ri&authuser=0&ogbl" 
+                target="_blank">Images</a></p>
+            <p class="nav-font"><a href="https://myaccount.google.com/"
+                target="_blank">Account</a></p>
+        </div>
+    </div>
 </nav>
 
 <body>
