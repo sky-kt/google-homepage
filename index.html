@@ -5,22 +5,30 @@ add widgets -->
     <style>
         #logo-image {
             position: relative;
-            top: 140px;
+            top: 195px;
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 30%;
+            height: 100px;
         }
+
         #searchbar {
-            position:relative;
-            top: 190px;
+            position: relative;
+            top: 230px;
             margin-left: auto;
             margin-right: auto;
-            width: 55%;
-            padding: 10px;
-            border-radius: 25px;
-            outline: none;
+            width: 560px;
+            padding: 11px;
+            border-radius: 24px;
+            outline: 0;
+            border-width: thin;
+            border-color: black;
         }
+
+        #searchbar:hover {
+            box-shadow: 0 0 10px lightgrey;
+        }
+
         .navigation {
             display: flex;
             justify-content: space-between;
@@ -42,25 +50,68 @@ add widgets -->
         }
 
         .nav-font {
-            font: Helvetica, Arial, Sans-Serif;
+            font-family: Helvetica, Arial, Sans-Serif;
             font-size: 15px;
         }
 
-        #customize-button {
-            display: inline-block;
-            position: relative;
-            border-radius: 15px;
-            outline: none;
-            width: 100px;
-            padding: 5px;
-            top: 660px;
-            left: 810px;
-            color: #00B3FF;
-            background-color: white;
+        .foot-font {
+            font-family: Helvetica, Arial, Sans-Serif;
+            font-size: 15px;
         }
-        
+
         ::placeholder {
             font-size:  16px;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: black;
+        }
+
+        #footer-info {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            justify-content: flex-start;
+        }
+
+        .button-info {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            justify-content: center;
+            top: 550px;
+        }
+
+        .button-size {
+            gap: 30px;
+            width: 200px;
+            padding: 5px;
+        }
+
+        .button-location {
+            position: relative;
+            top: 250px;
+        }
+
+        .footer-location {
+            position: relative;
+            top: 710px;
         }
     </style>
 </header>
@@ -91,6 +142,7 @@ add widgets -->
         <img src="https://bit.ly/3ctHbl9" alt="Google"  
         id="logo-image"> 
     </div>
+
     <div align="center">
         <!-- Central search bar-->
         <form>
@@ -99,10 +151,32 @@ add widgets -->
             name="searchbar" placeholder="Search Google or type a URL">
         </form> 
     </div>
+
+    <div class= "button-location">
+        <div class="button-info">
+            <!-- Central buttons-->
+            <button type="button" class="button-size">
+                Google Search
+            </button>
+    
+            <button type="button" class="button-size">
+                I'm Feeling Lucky
+            </button>
+        </div>
+    </div>
 </body> 
 
-<footer>
-    <div>
-        <button type="button" id="customize-button">Customize</button>
+<footer class="footer-location">
+    <div class="footer-color">
+        <div id="footer-info" class="foot-font" style="float:left">
+            <p><a href="" target="_blank">Advertising</a></p>
+            <p><a href="" target="_blank">Buisness</a></p>
+            <p><a href="" target="_blank">How Search Works</a></p>
+        </div>
+        <div id="footer-info" class="foot-font" style="float:right">
+            <p><a href="" target="_blank">Privacy</a></p>
+            <p><a href="" target="_blank">Terms</a></p>
+            <p><a href="" target="_blank">Settings</a></p>
+        </div>
     </div>
 </footer>
